@@ -13,7 +13,11 @@ router.get('/', async (req, res) => {
         {
           model: Product,
           as: 'product_tag_id',
-          attributes: ['id', 'product_name', 'price', 'stock', 'category_id']
+          attributes: ['id', 'product_name', 'price', 'stock', 'category_id'],
+          through: {
+            attributes: [],
+            // where: {completed: true}
+          }
         }
       ]
     })
@@ -37,7 +41,10 @@ router.get('/:id', async (req, res) => {
         {
           model: Product,
           as: 'product_tag_id',
-          attributes: ['id', 'product_name', 'price', 'stock', 'category_id']
+          attributes: ['id', 'product_name', 'price', 'stock', 'category_id'],
+          through: {
+            attributes: []
+          }
         }
       ]
     })
