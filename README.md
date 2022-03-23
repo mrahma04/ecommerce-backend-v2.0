@@ -1,4 +1,4 @@
-# E-commerce Back End v2.0 ::building_construction::potted_plant:
+# E-commerce Back End v2.0 :building_construction::potted_plant:
 
 #### This is a back end application for an e-commerce site. It uses an Express.js API and uses Sequelize to interact with a MySQL database.
 
