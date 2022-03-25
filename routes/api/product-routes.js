@@ -59,6 +59,7 @@ router.get('/:id', async (req, res) => {
     })
     if (!dbProductData) {
       res.status(404).json({ message: 'No product found with this id' })
+      return
     }
     res.json(dbProductData)
   } catch (err) {
