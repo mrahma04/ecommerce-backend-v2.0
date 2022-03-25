@@ -7,8 +7,7 @@
 - Clone repo on a machine running Node.js
 - Navigate to local repo directory
 - Install Node modules using `npm i`
-- Type :pencil2:`node index.js` to start app
-- Output file can be found in the `dist/` folder
+- Type :pencil2:`npm start` to start app
 
 [See Walkthrough Video](https://drive.google.com/file/d/1q29GLJLqCaFuN-FvzlEmXuaICNfxkwtR/view)
 
