@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
           as: 'product_tag_id',
           attributes: ['id', 'product_name', 'price', 'stock', 'category_id'],
           through: {
-            attributes: [],
+            attributes: [] // removes displaying the joined table called 'product_tag_id'
             // where: {completed: true}
           }
         }
@@ -43,7 +43,7 @@ router.get('/:id', async (req, res) => {
           as: 'product_tag_id',
           attributes: ['id', 'product_name', 'price', 'stock', 'category_id'],
           through: {
-            attributes: []
+            attributes: [] // removes displaying the joined table called 'product_tag_id'
           }
         }
       ]

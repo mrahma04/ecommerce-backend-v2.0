@@ -20,7 +20,7 @@ router.get('/', async (req, res) => {
           as: 'product_tag_id',
           attributes: ['id', 'tag_name'],
           through: {
-            attributes: []
+            attributes: [] // removes displaying the joined table called 'product_tag_id'
           }
         }
       ]
@@ -52,7 +52,7 @@ router.get('/:id', async (req, res) => {
           as: 'product_tag_id',
           attributes: ['id', 'tag_name'],
           through: {
-            attributes: []
+            attributes: [] // removes displaying the joined table called 'product_tag_id'
           }
         }
       ]
@@ -109,7 +109,11 @@ router.put('/:id', (req, res) => {
   })
     .then((product) => {
       // find all associated tags from ProductTag
-      return ProductTag.findAll({ where: { product_id: req.params.id } });
+      return ProductTag.findAll({
+        where: {
+          product_id: req.params.id
+        }
+      });
     })
     .then((productTags) => {
       // get list of current tag_ids

@@ -14,7 +14,7 @@ app.use(routes);
 // sync sequelize models to the database, then turn on the server
 
 const init = async () => {
-  await sequelize.sync({ force: false })
+  await sequelize.sync({ force: true })
   app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}!`);
   })
@@ -25,3 +25,5 @@ const init = async () => {
 // });
 
 init()
+
+// mysql --ssl-ca=./certs/server-ca.cer --ssl-cert=./certs/client-cert.cer --ssl-key=./certs/client-key.cer  --host=db.stippled.art --user=root -p
